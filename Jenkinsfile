@@ -4,6 +4,8 @@ pipeline {
     tools{
         jdk 'java11'
         maven 'maven'
+        sonarScanner 'sonar-scanner' 
+        
     }
     
     environment {
