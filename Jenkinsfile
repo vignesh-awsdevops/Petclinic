@@ -4,12 +4,13 @@ pipeline {
     tools{
         jdk 'java11'
         maven 'maven'
-        sonarScanner 'sonar-scanner' 
+        
         
     }
     
     environment {
-        SCANNER_HOME=tool 'sonar-scanner'
+        SONAR_SCANNER_HOME = "/opt/sonar-scanner/bin"
+        PATH = "${SONAR_SCANNER_HOME}:${PATH}"
     }
     
     stages{
